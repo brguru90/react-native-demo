@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { View, Text, StatusBar, Button, TextInput as ReactTextInput, TouchableNativeFeedback } from "react-native"
+import { View, Text, StatusBar, Button, TextInput as ReactTextInput, TouchableNativeFeedback, TouchableHighlight } from "react-native"
 import default_style from "./style.js"
 import logics from "../commonLogic"
 import { TextInput, TextInputMask } from 'react-native-paper';
@@ -54,16 +54,18 @@ export default ({ navigation }) => {
 
                     <View style={logics.styles(styles.mgv_lg, styles.textInputWrap)}>
                         {/* <Button
-                            style={{Size:20}}
+                            style={{height:100}}
                             onPress={() => navigation.navigate('Home')}
                             title="Login"
-                            Size={20}
+                            height={100}
                         /> */}
-                        <TouchableNativeFeedback
+                        <TouchableHighlight
+                            style={{ alignItems: 'center' }}
+                            underlayColor="white"
                             onPress={() => navigation.navigate('Home')}
                         >
                             <Text style={styles.loginBtn}>Login</Text>
-                        </TouchableNativeFeedback>
+                        </TouchableHighlight>
                     </View>
                 </View>
             </View>
