@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { View, Text, StatusBar, Button, TextInput as ReactTextInput,TouchableNativeFeedback } from "react-native"
+import { View, Text, StatusBar, Button, TextInput as ReactTextInput, TouchableNativeFeedback } from "react-native"
 import default_style from "./style.js"
 import logics from "../commonLogic"
 import { TextInput, TextInputMask } from 'react-native-paper';
+import Icon from 'react-native-vector-icons/Entypo';
 
 
 
@@ -27,7 +28,12 @@ export default ({ navigation }) => {
         <View style={styles.container}>
             <StatusBar barStyle="dark-content" hidden={false} translucent={false} backgroundColor="white" />
             <View style={logics.styles(styles.blk, styles.mgh_md, styles.flexv_hctr)}>
-                <Text style={logics.styles(styles.login_text, styles.text)}>Login</Text>             
+                <View style={styles.login_text}>
+                    <Icon name="login" style={styles.login_icon} />
+                    <Text style={styles.text}>
+                        Login
+                    </Text>
+                </View>
                 <View>
                     <View style={logics.styles(styles.mgv_md, styles.textInputWrap)}>
                         <TextInput
@@ -53,10 +59,10 @@ export default ({ navigation }) => {
                             title="Login"
                             Size={20}
                         /> */}
-                        <TouchableNativeFeedback                           
+                        <TouchableNativeFeedback
                             onPress={() => navigation.navigate('Home')}
                         >
-                            <Text  style={styles.loginBtn}>Login</Text>
+                            <Text style={styles.loginBtn}>Login</Text>
                         </TouchableNativeFeedback>
                     </View>
                 </View>

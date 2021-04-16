@@ -14,13 +14,21 @@ export default {
     },
     text:{
         color:"#000",
-        fontSize: 50,
+        fontSize: 20,
         textAlign:"center",
     },
     login_text:{
         position:"relative",
-        top:-80
+        top:-80,
+        flexDirection: 'row',
+        flexWrap:"wrap",
+        alignItems: 'center',
     },    
+    login_icon:{
+        fontSize: 50,
+        color:"#000",
+        marginRight:10
+    },
     loginBtn:{
         color:"#000",
         fontSize: 40,
@@ -40,7 +48,7 @@ export default {
         width:300
     },
     textInput:{
-        fontSize: 20
+        fontSize: 20,
     },
     blk:{
         flex:1,
