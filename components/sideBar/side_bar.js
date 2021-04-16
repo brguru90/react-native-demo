@@ -187,7 +187,7 @@ export default class Sidebar extends React.Component {
 
     show_menu = () => {
         console.log("show menu")
-        this.animate([this.state.styles.sidebar.left], [0], 1000)
+        this.animate([this.state.styles.sidebar.left], [0], 300)
         this.setState({ sidebar_state: true })
 
     }
@@ -197,7 +197,7 @@ export default class Sidebar extends React.Component {
         console.log("hide menu")
 
         if (Number(JSON.stringify(this.state.styles.sidebar.left)) == 0) {
-            this.animate([this.state.styles.sidebar.left], [-this.width], 1000)
+            this.animate([this.state.styles.sidebar.left], [-this.width], 300)
             this.setState({ sidebar_state: false })
         }
     }
@@ -220,7 +220,7 @@ export default class Sidebar extends React.Component {
                     <Animated.View style={styles.sidebar} >
                         <View style={styles.sidebar_bg}  {...this.state.panResponder_sidebar.panHandlers} >
                             <TouchableOpacity style={styles.touchableContainer} activeOpacity={1}>
-                                {this.props.menu ? <this.props.menu navigation={this.props.navigation} /> : <Button onPress={() =>  this.props.navigation.navigate('Home')} title="Home" />}
+                                {this.props.menu ? <this.props.menu navigation={this.props.navigation} hide_menu={this.hide_menu} /> : <Button onPress={() =>  this.props.navigation.navigate('Home')} title="Home" />}
                             </TouchableOpacity>
                         </View>
 

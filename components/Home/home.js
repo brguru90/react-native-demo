@@ -4,6 +4,7 @@ import default_style from "./style.js"
 import logics from "../commonLogic"
 import menu from "../Menu/menu";
 import Sidebar from "../sideBar/side_bar";
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 
@@ -21,7 +22,6 @@ export default ({navigation}) => {
         <Sidebar menu={menu} navigation={navigation}>
             <StatusBar barStyle="dark-content" hidden={false} translucent={false} backgroundColor="red" />
             <View style={styles.content}>
-                <Text>Home screen</Text>
             </View>
         </Sidebar>
     )

@@ -50,6 +50,15 @@ export default {
         flex: 1,
         zIndex:101,
         width:"100%",
+        
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 20,
     },    
     body: {
         backgroundColor:"white",
