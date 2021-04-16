@@ -7,13 +7,10 @@ import {
 export default {
 
     container: {
+        flex:1,
         backgroundColor: '#fff',
-        height:"100%",
         flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'flex-start',
-        paddingLeft:10,
-        paddingRight:10,
+        justifyContent: 'flex-start'
     },
     text:{
         color:"#000",
@@ -23,4 +20,13 @@ export default {
         color:"#000",
         fontSize: 20,
     },
+    textInput:{
+        fontSize: 20,
+        height:20,
+    },
+    blk:{
+        flex:1,
+        margin:5
+    }
+    
 }
