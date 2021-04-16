@@ -50,24 +50,30 @@ export default {
         backgroundColor: "#fff",
         paddingTop: 5,
         paddingBottom: 10,  
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-        elevation: 0.5,
-        borderColor:'#f2f2f2',
-        borderBottomWidth:1,
+        paddingLeft:10,
         marginBottom:5,
+
+        // shadowColor: "#000",
+        // shadowOffset: {
+        //     width: 0,
+        //     height: 2,
+        // },
+        // shadowOpacity: 0.25,
+        // shadowRadius: 3.84,
+        // elevation: 0.5,
+        // borderColor:'#f2f2f2',
+        // borderBottomWidth:1,
     },
     menuBtnText: {
         fontSize: 20,
     },
     body:{
+        marginTop:40,
         flex:1,
-        borderColor:'#dedede',
+        // borderTopWidth:1,
+        // borderTopColor:"#f2f2f2",
+
+        borderRightColor:'#dedede',
         borderRightWidth:1
     }
 

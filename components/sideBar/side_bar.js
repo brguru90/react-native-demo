@@ -177,8 +177,9 @@ export default class Sidebar extends React.Component {
                 {
                     toValue: to[i],
                     duration: dur,
-                    easing: Easing.out(Easing.ease)
-                }
+                    easing: Easing.out(Easing.ease),
+                    // useNativeDriver: true,
+                },
             ).start(() => console.log("sidebar.left", this.width, this.state.styles.sidebar.left, (Number(JSON.stringify(this.state.styles.sidebar.left)) / this.width).toFixed(2)));
         }
 
@@ -211,8 +212,8 @@ export default class Sidebar extends React.Component {
 
         return (
             <View style={styles.container}  {...this.state.panResponder_parent.panHandlers} >
-
                 <StatusBar barStyle="light-content" hidden={false} translucent={false} backgroundColor="#0009b6" color="white" />
+                
                 <TouchableOpacity style={styles.touchableContainer} onPress={this.hide_menu} activeOpacity={1} >
 
                     <View style={styles.menuBar}>

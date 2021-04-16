@@ -22,9 +22,9 @@ import Screen2 from "./components/Screen2/screen2"
 const config = {
   animation: 'spring',
   config: {
-    stiffness: 1000,
+    stiffness: 10000,
     damping: 500,
-    mass: 5,
+    mass: 2,
     overshootClamping: true,
     restDisplacementThreshold: 0.01,
     restSpeedThreshold: 0.01,
@@ -53,7 +53,7 @@ const Stack = createStackNavigator();
 const App = () => {
 
   return (
-    <NavigationContainer theme={{ colors: { background: '#000' } }}>
+    <NavigationContainer theme={{ colors: { background: '#000' } }}>      
       <Stack.Navigator
         screenOptions={{
           headerShown: false
