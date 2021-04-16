@@ -14,7 +14,7 @@ export default {
         
     },
     banner: {
-        backgroundColor: "#020a61",
+        backgroundColor: "#3937ea",
         minHeight: 170,
         paddingBottom:20,
         borderColor:'#000',

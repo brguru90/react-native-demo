@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, View, TouchableOpacity, Animated, Dimensions, Easing, PanResponder, Text } from 'react-native';
+import { Button, View, TouchableOpacity, Animated, Dimensions, Easing, PanResponder, Text, StatusBar } from 'react-native';
 import default_style from "./style.js"
 import logics from "../commonLogic.js"
 
@@ -79,10 +79,10 @@ export default class Sidebar extends React.Component {
             console.log("Child move", gesture.moveX, gesture.dx)
 
 
-            if (this.state.sidebar_state && gesture.dx<=0) {
-            console.log("Child slidingdown",this.width * 0.8,this.state.styles.sidebar.left,gesture.dx);
-            // this.animate([this.state.styles.sidebar.left], [gesture.dx], 0)
-            this.set_sidebar_pos(gesture.dx)
+            if (this.state.sidebar_state && gesture.dx <= 0) {
+                console.log("Child slidingdown", this.width * 0.8, this.state.styles.sidebar.left, gesture.dx);
+                // this.animate([this.state.styles.sidebar.left], [gesture.dx], 0)
+                this.set_sidebar_pos(gesture.dx)
             }
 
         },
@@ -162,7 +162,7 @@ export default class Sidebar extends React.Component {
 
     }
 
-    set_sidebar_pos=(w)=>{
+    set_sidebar_pos = (w) => {
         let cur_style = this.state.styles
         cur_style.sidebar.left = new Animated.Value(w)
         this.setSyncState({ styles: cur_style })
@@ -211,6 +211,8 @@ export default class Sidebar extends React.Component {
 
         return (
             <View style={styles.container}  {...this.state.panResponder_parent.panHandlers} >
+
+                <StatusBar barStyle="light-content" hidden={false} translucent={false} backgroundColor="#0009b6" color="white" />
                 <TouchableOpacity style={styles.touchableContainer} onPress={this.hide_menu} activeOpacity={1} >
 
                     <View style={styles.menuBar}>
@@ -220,7 +222,7 @@ export default class Sidebar extends React.Component {
                     <Animated.View style={styles.sidebar} >
                         <View style={styles.sidebar_bg}  {...this.state.panResponder_sidebar.panHandlers} >
                             <TouchableOpacity style={styles.touchableContainer} activeOpacity={1}>
-                                {this.props.menu ? <this.props.menu navigation={this.props.navigation} hide_menu={this.hide_menu} /> : <Button onPress={() =>  this.props.navigation.navigate('Home')} title="Home" />}
+                                {this.props.menu ? <this.props.menu navigation={this.props.navigation} hide_menu={this.hide_menu} /> : <Button onPress={() => this.props.navigation.navigate('Home')} title="Home" />}
                             </TouchableOpacity>
                         </View>
 

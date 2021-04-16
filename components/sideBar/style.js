@@ -24,7 +24,8 @@ export default {
     menuBar: {
         width: "100%",
         height: 50,
-        backgroundColor:"#08196e",
+        backgroundColor:"#3937ea",
+        // #3d5afe
         borderBottomStyle: "dotted",
         borderBottomColor: "gray",
         borderBottomWidth: 1,
