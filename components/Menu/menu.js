@@ -14,9 +14,9 @@ export default class Menu extends Component {
         }
     }
 
-    email="brguru90@gmail.com"
-    descriptions="some string"
-    city="Banglore, KARNATAKA"
+    email = "brguru90@gmail.com"
+    descriptions = "some string"
+    city = "Banglore, KARNATAKA"
 
 
 
@@ -28,60 +28,63 @@ export default class Menu extends Component {
 
                 <View style={styles.banner}>
                     {this.state.favicon ? <Avatar.Image size={104} style={styles.avatar} source={this.state.favicon} /> : <Avatar.Image size={104} style={styles.avatar} />}
-                   
+
                     <View style={styles.avatar_descriptions}>
                         <Icon
                             name="email" style={styles.desc_icon}
-                        /> 
+                        />
                         <Text style={styles.desc} >{this.email}</Text>
                     </View>
                     <View style={styles.avatar_descriptions}>
                         <Icon
                             name="email" style={styles.desc_icon}
-                        /> 
+                        />
                         <Text style={styles.desc} >{this.city}</Text>
                     </View>
+                    
                 </View>
 
-                <TouchableOpacity style={styles.menuBtn} onPress={() => {
-                    this.props.hide_menu()
-                    this.props.navigation.navigate('Home')
-                }}>
-                    <Text style={styles.menuBtnText} > Home </Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.menuBtn} onPress={() => {
-                    this.props.hide_menu()
-                    this.props.navigation.navigate('Screen2')
-                }}>
-                    <Text style={styles.menuBtnText} > Screen2 </Text>
-                </TouchableOpacity>
+                <View style={styles.body}>
+                    <TouchableOpacity style={styles.menuBtn} onPress={() => {
+                        this.props.hide_menu()
+                        this.props.navigation.navigate('Home')
+                    }}>
+                        <Text style={styles.menuBtnText} > Home </Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.menuBtn} onPress={() => {
+                        this.props.hide_menu()
+                        this.props.navigation.navigate('Screen2')
+                    }}>
+                        <Text style={styles.menuBtnText} > Screen2 </Text>
+                    </TouchableOpacity>
 
-                <TouchableOpacity style={styles.menuBtn} onPress={() => {
-                    this.props.hide_menu()
-                    this.props.navigation.navigate('Home')
-                }}>
-                    <Text style={styles.menuBtnText} > Home </Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.menuBtn} onPress={() => {
-                    this.props.hide_menu()
-                    this.props.navigation.navigate('Screen2')
-                }}>
-                    <Text style={styles.menuBtnText} > Screen2 </Text>
-                </TouchableOpacity>
+                    <TouchableOpacity style={styles.menuBtn} onPress={() => {
+                        this.props.hide_menu()
+                        this.props.navigation.navigate('Home')
+                    }}>
+                        <Text style={styles.menuBtnText} > Home </Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.menuBtn} onPress={() => {
+                        this.props.hide_menu()
+                        this.props.navigation.navigate('Screen2')
+                    }}>
+                        <Text style={styles.menuBtnText} > Screen2 </Text>
+                    </TouchableOpacity>
 
 
-                <TouchableOpacity style={styles.menuBtn} onPress={() => {
-                    this.props.hide_menu()
-                    this.props.navigation.navigate('Home')
-                }}>
-                    <Text style={styles.menuBtnText} > Home </Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.menuBtn} onPress={() => {
-                    this.props.hide_menu()
-                    this.props.navigation.navigate('Screen2')
-                }}>
-                    <Text style={styles.menuBtnText} > Screen2 </Text>
-                </TouchableOpacity>
+                    <TouchableOpacity style={styles.menuBtn} onPress={() => {
+                        this.props.hide_menu()
+                        this.props.navigation.navigate('Home')
+                    }}>
+                        <Text style={styles.menuBtnText} > Home </Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.menuBtn} onPress={() => {
+                        this.props.hide_menu()
+                        this.props.navigation.navigate('Screen2')
+                    }}>
+                        <Text style={styles.menuBtnText} > Screen2 </Text>
+                    </TouchableOpacity>
+                </View>
             </View>
         )
     }

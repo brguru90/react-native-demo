@@ -8,17 +8,17 @@ export default {
 
     menu: {
         flex: 1,
-        // paddingRight: 2,
         backgroundColor: "#fff",
         flexDirection: 'column',
         justifyContent: 'flex-start',
-        // borderColor:'#f2f2f2',
-        // borderRightWidth:1,
         
     },
     banner: {
         backgroundColor: "#020a61",
-        minHeight: 170
+        minHeight: 170,
+        paddingBottom:20,
+        borderColor:'#000',
+        borderRightWidth:1,
     },
     avatar:{
         backgroundColor:"#fff",
@@ -29,10 +29,11 @@ export default {
     },
     avatar_descriptions:{
         color:"#fff",
-        flex:1,
         flexDirection:"row",
         justifyContent:"flex-start",
         alignItems: 'center',
+        marginLeft:20,
+        marginBottom:5,
     },
     desc_icon:{
         color:"#fff",
@@ -48,20 +49,25 @@ export default {
         backgroundColor: "#fff",
         paddingTop: 5,
         paddingBottom: 10,  
-        // shadowColor: "#000",
-        // shadowOffset: {
-        //     width: 0,
-        //     height: 2,
-        // },
-        // shadowOpacity: 0.25,
-        // shadowRadius: 3.84,
-        // elevation: 2,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 0.5,
         borderColor:'#f2f2f2',
         borderBottomWidth:1,
         marginBottom:5,
     },
     menuBtnText: {
         fontSize: 20,
+    },
+    body:{
+        flex:1,
+        borderColor:'#dedede',
+        borderRightWidth:1
     }
 
 }
