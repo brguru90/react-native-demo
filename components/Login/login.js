@@ -8,20 +8,10 @@ import Icon from 'react-native-vector-icons/Entypo';
 
 
 export default ({ navigation }) => {
-
     const [style, setStyle] = useState({})
-
-    // useEffect(() => {
-
-    //     const styles = logics.updateStyle(default_style, style)
-    // }, [style])
-
     const styles = logics.updateStyle(default_style, style)
 
     const [text, setText] = React.useState('');
-
-
-    console.log(styles)
 
 
     return (

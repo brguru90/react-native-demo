@@ -8,13 +8,9 @@ import Sidebar from "../sideBar/side_bar";
 
 export default ({navigation}) => {
 
-    const [state, setState] = useState({
-        styles:{
+    const [style, setStyle] = useState({})
 
-        }
-    })
-
-    const styles = logics.updateStyle(default_style, state.styles)
+    const styles = logics.updateStyle(default_style, style)
 
     return (
         <Sidebar menu={menu} navigation={navigation}>
