@@ -7,8 +7,9 @@ import global_style from "./global_style.js"
 
 
 export default {
-    updateStyle: (default_style, cur_style) => {
 
+    
+    updateStyle: (default_style, cur_style) => {
         let styles = Object.assign({},global_style)
         for(let key in default_style)
             styles[key] = StyleSheet.flatten([default_style[key], cur_style[key]]);
@@ -18,5 +19,6 @@ export default {
             }
         }
         return styles
-    }
+    },
+    styles:(...styles)=>StyleSheet.flatten(styles)
 }

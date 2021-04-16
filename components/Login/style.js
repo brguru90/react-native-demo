@@ -15,18 +15,37 @@ export default {
     text:{
         color:"#000",
         fontSize: 50,
+        textAlign:"center",
     },
+    login_text:{
+        position:"relative",
+        top:-80
+    },    
     loginBtn:{
         color:"#000",
-        fontSize: 20,
+        fontSize: 40,
+        height:75,
+        alignSelf: "center",
+        backgroundColor:"purple",
+        color:"#fff",
+        textAlign:"center",
+        paddingTop:10,
+        paddingBottom:10,
+        paddingLeft:30,
+        paddingRight:30,
+        borderRadius:5
+    },
+    textInputWrap:{
+        height:64,
+        width:300
     },
     textInput:{
-        fontSize: 20,
-        height:20,
+        fontSize: 20
     },
     blk:{
         flex:1,
-        margin:5
     }
+
+    
     
 }

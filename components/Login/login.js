@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { View, Text, StatusBar, Button } from "react-native"
+import { View, Text, StatusBar, Button, TextInput as ReactTextInput,TouchableNativeFeedback } from "react-native"
 import default_style from "./style.js"
 import logics from "../commonLogic"
-import { TextInput } from 'react-native-paper';
+import { TextInput, TextInputMask } from 'react-native-paper';
 
 
 
@@ -20,25 +20,45 @@ export default ({ navigation }) => {
     const [text, setText] = React.useState('');
 
 
+    console.log(styles)
+
 
     return (
         <View style={styles.container}>
             <StatusBar barStyle="dark-content" hidden={false} translucent={false} backgroundColor="white" />
-            <View style={styles.blk}>
-                <Text style={styles.text}>Login screen</Text>
-                <Button
-                    style={styles.loginBtn}
-                    onPress={() => navigation.navigate('Home')}
-                    title="Login"
-                />
+            <View style={logics.styles(styles.blk, styles.mgh_md, styles.flexv_hctr)}>
+                <Text style={logics.styles(styles.login_text, styles.text)}>Login</Text>             
+                <View>
+                    <View style={logics.styles(styles.mgv_md, styles.textInputWrap)}>
+                        <TextInput
+                            style={styles.textInput}
+                            label="Email"
+                            value={text}
+                            onChangeText={text => setText(text)}
+                        />
+                    </View>
+                    <View style={logics.styles(styles.mgv_md, styles.textInputWrap)}>
+                        <TextInput
+                            style={styles.textInput}
+                            label="Password"
+                            secureTextEntry
+                            onChangeText={text => setText(text)}
+                        />
+                    </View>
 
-                <View style={styles.mg_md}>
-                    <TextInput
-                        style={styles.textInput}
-                        label="Email"
-                        value={text}
-                        onChangeText={text => setText(text)}
-                    />
+                    <View style={logics.styles(styles.mgv_lg, styles.textInputWrap)}>
+                        {/* <Button
+                            style={{Size:20}}
+                            onPress={() => navigation.navigate('Home')}
+                            title="Login"
+                            Size={20}
+                        /> */}
+                        <TouchableNativeFeedback                           
+                            onPress={() => navigation.navigate('Home')}
+                        >
+                            <Text  style={styles.loginBtn}>Login</Text>
+                        </TouchableNativeFeedback>
+                    </View>
                 </View>
             </View>
         </View>
