@@ -36,10 +36,10 @@ export default class Menu extends Component {
                         <Text style={styles.desc} >{this.email}</Text>
                     </View>
                     <View style={styles.avatar_descriptions}>
-                        <Icon
+                        {/* <Icon
                             name="email" style={styles.desc_icon}
-                        />
-                        <Text style={styles.desc} >{this.city}</Text>
+                        /> */}
+                        <Text style={styles.desc}>{this.city}</Text>
                     </View>
                     
                 </View>
@@ -60,30 +60,10 @@ export default class Menu extends Component {
 
                     <TouchableOpacity style={styles.menuBtn} onPress={() => {
                         this.props.hide_menu()
-                        this.props.navigation.navigate('Home')
+                        this.props.navigation.navigate('Login')
                     }}>
-                        <Text style={styles.menuBtnText} > Home </Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.menuBtn} onPress={() => {
-                        this.props.hide_menu()
-                        this.props.navigation.navigate('Screen2')
-                    }}>
-                        <Text style={styles.menuBtnText} > Screen2 </Text>
-                    </TouchableOpacity>
-
-
-                    <TouchableOpacity style={styles.menuBtn} onPress={() => {
-                        this.props.hide_menu()
-                        this.props.navigation.navigate('Home')
-                    }}>
-                        <Text style={styles.menuBtnText} > Home </Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.menuBtn} onPress={() => {
-                        this.props.hide_menu()
-                        this.props.navigation.navigate('Screen2')
-                    }}>
-                        <Text style={styles.menuBtnText} > Screen2 </Text>
-                    </TouchableOpacity>
+                        <Text style={styles.menuBtnText} > Logout </Text>
+                    </TouchableOpacity>                  
                 </View>
             </View>
         )

@@ -7,12 +7,20 @@ import {
 export default {
 
     container: {
-        flex: 1,
         backgroundColor: '#fff',
+        height:"100%",
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'flex-start',
         paddingLeft:10,
         paddingRight:10,
-    }
+    },
+    text:{
+        color:"#000",
+        fontSize: 50,
+    },
+    loginBtn:{
+        color:"#000",
+        fontSize: 20,
+    },
 }

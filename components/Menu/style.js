@@ -30,6 +30,7 @@ export default {
     avatar_descriptions:{
         color:"#fff",
         flexDirection:"row",
+        flexWrap:"wrap",
         justifyContent:"flex-start",
         alignItems: 'center',
         marginLeft:20,
@@ -37,12 +38,12 @@ export default {
     },
     desc_icon:{
         color:"#fff",
-        fontSize: 20
+        fontSize: 20,
+        marginRight:10,
     },
     desc:{
         color:"#fff",
         fontSize: 16,
-        marginLeft:10
     },
     menuBtn: {
         width: "100%",

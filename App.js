@@ -14,6 +14,7 @@ import {
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator, TransitionSpecs, CardStyleInterpolators } from '@react-navigation/stack';
 
+import Login from "./components/Login/login"
 import Home from "./components/Home/home"
 import Screen2 from "./components/Screen2/screen2"
 
@@ -58,6 +59,7 @@ const App = () => {
           headerShown: false
         }}
       >
+        <Stack.Screen  name="Login" component={Login}  options={options}  />
         <Stack.Screen  name="Home" component={Home}  options={options}  />
         <Stack.Screen name="Screen2"  component={Screen2} options={options}  />
       </Stack.Navigator>

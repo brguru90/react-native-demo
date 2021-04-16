@@ -21,7 +21,7 @@ export default ({navigation}) => {
     return (
         <Sidebar menu={menu} navigation={navigation}>
             <StatusBar barStyle="dark-content" hidden={false} translucent={false} backgroundColor="red" />
-            <View style={styles.content}>
+            <View style={styles.container}>
             </View>
         </Sidebar>
     )
