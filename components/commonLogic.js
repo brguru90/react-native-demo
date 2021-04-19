@@ -10,6 +10,7 @@ export default {
 
     
     updateStyle: (default_style, cur_style) => {
+        // return StyleSheet.create(...global_style,...default_style,...cur_style)
         let styles = Object.assign({},global_style)
         for(let key in default_style)
             styles[key] = StyleSheet.flatten([default_style[key], cur_style[key]]);
