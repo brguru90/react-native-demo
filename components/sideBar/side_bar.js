@@ -10,6 +10,8 @@ export default class Sidebar extends React.Component {
 
 
 
+    slide_start_from_left=55
+
 
     panResponder_parent = PanResponder.create({
         // onStartShouldSetPanResponder: () => true,
@@ -24,7 +26,7 @@ export default class Sidebar extends React.Component {
         // onMoveShouldSetPanResponderCapture:()=>true, 
         onPanResponderMove: (event, gesture) => {
             console.log("Parent move", gesture.moveX, gesture.dx)
-            if (gesture.x0 < 80) {
+            if (gesture.x0 < this.slide_start_from_left) {
                 console.log(gesture);
                 if (gesture.moveX <= this.width * 0.80) {
                     console.log("Parent slidingup");
